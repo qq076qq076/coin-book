@@ -1,0 +1,83 @@
+# Node modules
+node_modules/
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# Expo-specific files
+.expo/
+.expo-shared/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor settings and project files
+.idea/
+.vscode/
+*.xml
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+*.iml
+*.code-workspace
+
+# Build output
+dist/
+build/
+web-build/
+
+# Metro bundler cache
+metro-cache/
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Jest coverage reports
+coverage/
+
+# React Native / Expo Debug & State Files
+.debug
+*.log
+*.bak
+
+# iOS / Xcode
+ios/Pods/
+ios/build/
+ios/*.xcodeproj/project.xcworkspace/
+ios/*.xcuserstate
+ios/*.xcuserdata/
+ios/*.xcodeproj/xcuserdata/
+ios/.bundle
+
+# Android / Gradle
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+
+# Firebase
+firebase-debug.log
+
+# NPM package lock files (if using different package managers)
+pnpm-lock.yaml
+
+# Others
+*.expo/
+expo-settings.json

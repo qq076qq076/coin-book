@@ -1,9 +1,13 @@
-import { View, Text, TouchableOpacity, StyleSheet, useWindowDimensions } from "react-native";
+import { View, Text, StyleSheet, useWindowDimensions } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
-import { FontAwesome } from "@expo/vector-icons";
+import NavButton from "@/components/ui/NavButton";
 
-export default function Layout({ children }) {
+type LayoutProps = {
+    children: any;
+};
+
+const Layout: React.FC<LayoutProps> = ({children}) =>  {
     const insets = useSafeAreaInsets();
     const router = useRouter();
     const { width } = useWindowDimensions();
@@ -41,22 +45,6 @@ export default function Layout({ children }) {
         </View>
     );
 }
-
-// 通用的導航按鈕
-function NavButton({ title, icon, onPress, isSelected }) {
-    return (
-        <TouchableOpacity style={styles.navButton} onPress={onPress}>
-            <FontAwesome
-                name={icon}
-                size={20}
-                style={isSelected ? styles.selectedIcon : styles.icon} // 動態切換顏色
-            />
-            <Text style={styles.navText}>{title}</Text>
-        </TouchableOpacity>
-    );
-}
-
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -102,21 +90,6 @@ const styles = StyleSheet.create({
         paddingTop: 60,
         paddingHorizontal: 20,
     },
-    navButton: {
-        alignItems: "center",
-        marginVertical: 10,
-        padding: 10,
-        borderRadius: 10,
-    },
-    navText: {
-        color: "#E4E4E7", // 文字顏色與 Header 一致
-        fontSize: 12,
-        marginTop: 5,
-    },
-    icon: {
-        color: "#71717A", // 預設圖示為低調中性灰
-    },
-    selectedIcon: {
-        color: "#3F79FF", // 選中時變為科技藍
-    },
 });
+
+export default Layout;
